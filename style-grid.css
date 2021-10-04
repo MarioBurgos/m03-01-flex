@@ -1,0 +1,222 @@
+main {
+    display: grid;
+    grid-template-areas: "header header header header" "contenido contenido contenido derecha" "footer footer footer footer";
+}
+
+
+/*Definir las areas del grid layout*/
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: derecha;
+}
+
+section {
+    grid-area: contenido;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/*header*/
+
+.header {
+    background-image: url("./img/bg-header.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.nav {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    flex-grow: 1;
+    text-align: start;
+}
+
+.nav-link {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    flex-grow: 4;
+}
+
+.nav-link ul,
+.nav-link a {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: #888;
+    align-items: center;
+    transition: 0.75s ease-in;
+}
+
+.nav-social ul,
+.nav-social a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #888;
+    text-align: end;
+}
+
+i {
+    margin: 0.5rem;
+}
+
+i:hover {
+    transform: scale(1.5);
+}
+
+a:hover {
+    transform: rotateY(360deg);
+    color: rgb(255, 50, 50);
+}
+
+.hgroup {
+    background: rgb(0, 0, 0, 0.05);
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.hgroup .title {
+    width: inherit;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgba(255, 0, 0, 0.40);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+
+/*main content*/
+
+.article {
+    padding: 1rem;
+}
+
+.section {
+    background: #fdfdfd;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px double #ddd;
+}
+
+.card-one {
+    background: #ddd;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: calc(50% - 2rem);
+    height: auto;
+}
+
+.card-two {
+    background: #55f;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 100%;
+}
+
+.card-img img {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card-title {
+    padding-left: 1rem;
+    background: rgb(255, 50, 50);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: #f0f0f0;
+    position: relative;
+    bottom: 9%;
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+.card-description {
+    padding: 0.5rem;
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #444;
+    position: relative;
+    padding-top: 0;
+}
+
+.card-link {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #666;
+    text-decoration: none;
+    position: relative;
+    bottom: 0;
+}
+
+.aside {
+    background: #f00;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-content {
+    background: #ff1;
+    width: auto;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.footer {
+    background: #000;
+    padding: 1rem;
+}
+
+.footer-content {
+    background: #aa0;
+    width: auto;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-link,
+    .nav-link ul {
+        flex-direction: column;
+    }
+    .article {
+        background: #ff0;
+        flex-direction: column;
+    }
+}
+
+
+/* @media (max-width: 600px) {
+    .nav-content {
+        background: #fff;
+        flex-direction: column;
+    }
+    .section {
+        flex-direction: column;
+        flex-grow: unset;
+        flex-wrap: nowrap;
+    }
+    .card-one,
+    .card-two {
+        width: auto;
+    }
+} */
