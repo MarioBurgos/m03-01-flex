@@ -105,6 +105,10 @@ a:hover {
 
 /*main content*/
 
+.main-content {
+    display: flex;
+}
+
 .article {
     padding: 1rem;
 }
